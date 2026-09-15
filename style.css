@@ -1,0 +1,100 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#061a42;--blue:#1769ff;--light:#f3f7fc;--text:#11213d;--muted:#68758b}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.header{height:76px;background:#fff;position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 3px 20px #061a4212}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:13px;letter-spacing:.5px;color:var(--navy)}
+.logo-mark{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#bfc9dc);border:5px solid var(--navy);color:var(--navy);font-weight:900;font-size:14px}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:600;color:#33415c}
+.nav-links a{position:relative}
+.nav-links a:not(.nav-btn)::after{content:"";position:absolute;height:2px;background:var(--blue);left:0;right:100%;bottom:-9px;transition:.25s}
+.nav-links a:hover::after,.nav-links a.active::after{right:0}
+.nav-btn,.btn.primary{background:linear-gradient(135deg,#1d72ff,#1458db);color:#fff;border-radius:30px;padding:13px 22px;box-shadow:0 8px 25px #1769ff30}
+.nav-btn span,.btn span{margin-left:8px}
+.menu-toggle{display:none;border:0;background:none}
+.menu-toggle span{display:block;width:26px;height:3px;background:var(--navy);margin:5px;border-radius:5px}
+
+.hero{min-height:690px;margin-top:76px;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(3,19,49,.98) 0%,rgba(3,19,49,.9) 42%,rgba(3,19,49,.25) 80%),
+url("https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,#1468ff33 56%,transparent 66%)}
+.hero-content{min-height:690px;display:flex;align-items:center;position:relative;z-index:2}
+.hero-copy{max-width:650px;color:#fff;padding-top:30px}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;color:#2370ff;margin-bottom:12px}
+.hero .eyebrow{color:#fff}
+h1{font-size:clamp(48px,6vw,78px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+h1 span{color:#2675ff}
+.hero-sports{font-size:20px;font-weight:700;margin-bottom:15px}
+.hero-sports b{color:#2875ff;margin:0 7px}
+.hero-text{max-width:510px;color:#d5ddec;font-size:15px}
+.hero-actions{display:flex;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 23px;border-radius:30px;font-weight:700;font-size:13px;transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.outline{border:1px solid #fff;color:#fff}
+.hero-scroll{position:absolute;z-index:3;bottom:22px;left:50%;transform:translateX(-50%);color:#fff;font-size:10px;letter-spacing:2px;opacity:.7}
+.hero-scroll span{margin-left:10px;font-size:16px}
+
+.section{padding:92px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
+.about-image{height:390px;border-radius:16px;background:url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;box-shadow:20px 25px 55px #061a4220}
+.image-badge{position:absolute;bottom:22px;left:22px;background:#fff;padding:12px 18px;border-radius:10px;display:flex;gap:9px;align-items:center;box-shadow:0 10px 30px #0002}
+.image-badge strong{font-size:22px;color:var(--blue)}.image-badge small{font-weight:800}
+h2{font-size:clamp(32px,4vw,45px);line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
+.about-copy>p:not(.eyebrow){color:var(--muted);font-size:15px;margin-bottom:16px}
+.features{display:flex;gap:25px;margin-top:30px}
+.features div{display:flex;align-items:center;gap:9px;font-size:11px}.features span{width:33px;height:33px;border:2px solid #2470ff;border-radius:50%;display:grid;place-items:center;color:#2470ff;font-weight:900}
+
+.light{background:var(--light)}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.program-card{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 12px 35px #10234d12;transition:.3s}
+.program-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px #10234d1c}
+.program-photo{height:190px;background-position:center;background-size:cover}
+.taekwondo{background-image:url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80")}
+.gymnastics{background-image:url("https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=800&q=80")}
+.mma{background-image:url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80")}
+.program-body{padding:24px;position:relative}.program-icon{position:absolute;top:-26px;left:24px;background:#1769ff;color:#fff;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:5px solid #fff;font-size:22px}
+.program-body h3{font-size:23px;margin-top:12px}.program-body p{font-size:13px;color:var(--muted);margin:4px 0 13px}.program-body a{font-size:12px;color:var(--blue);font-weight:800}
+
+.achievements{background:linear-gradient(120deg,#04183b,#092e6c);color:#fff;position:relative;overflow:hidden}
+.achievements:after{content:"";position:absolute;width:480px;height:480px;border:80px solid #2475ff20;border-radius:50%;right:-180px;top:-220px}
+.achievements-grid{display:grid;grid-template-columns:1fr 1.2fr .8fr;gap:40px;align-items:center;position:relative;z-index:2}
+.achievement-copy .eyebrow{color:#55a0ff}.achievement-copy p:not(.eyebrow){color:#c6d1e5;max-width:330px;font-size:14px;margin-bottom:22px}.achievement-copy .outline{margin-top:5px}
+.trophy{font-size:145px;text-align:center;filter:drop-shadow(0 15px 25px #0006)}
+.stats{display:grid;gap:18px}.stats div{display:flex;flex-direction:column;border-left:2px solid #2475ff;padding-left:16px}.stats strong{font-size:27px}.stats span{font-size:11px;color:#b6c5dd}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:145px;gap:12px;margin-top:30px}
+.gallery-item{border-radius:9px;background-size:cover;background-position:center;transition:.3s}
+.gallery-item:hover{transform:scale(1.025)}
+.g1{background-image:url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?auto=format&fit=crop&w=600&q=80")}
+.g2{background-image:url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80")}
+.g3{background-image:url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80")}
+.g4{background-image:url("https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=600&q=80")}
+.g5{background-image:url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80")}
+.g6{background-image:url("https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=600&q=80")}
+.g1{grid-column:span 2}.g2{grid-column:span 1}.g3{grid-column:span 1}.g4{grid-column:span 1}.g5{grid-column:span 1}.g6{grid-column:span 2}
+
+.cta{background:linear-gradient(100deg,#061a42dd,#0a3475dd),url("https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1800&q=80") center/cover;color:#fff;padding:65px 0}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{margin-bottom:8px}.cta p:not(.eyebrow){color:#d2dced;max-width:650px;font-size:14px}
+
+.footer{background:#03142f;color:#fff;padding:45px 0 20px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:30px;align-items:start}.footer-logo{display:flex;align-items:center;gap:10px;font-size:12px}.footer-label{font-size:9px;letter-spacing:1.5px;color:#5f9dff;font-weight:800}.footer p{font-size:12px;color:#bdc9dc;margin-top:6px}.copyright{text-align:center;border-top:1px solid #ffffff15;margin-top:30px;padding-top:18px;color:#71819b;font-size:10px}
+.top-btn{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:0;border-radius:50%;background:#1769ff;color:#fff;font-size:20px;cursor:pointer;display:none;z-index:99;box-shadow:0 10px 25px #1769ff40}
+
+@media(max-width:900px){
+  .menu-toggle{display:block;z-index:1001}
+  .nav-links{position:fixed;top:76px;left:0;right:0;background:#fff;padding:25px;display:none;flex-direction:column;align-items:flex-start;gap:22px;box-shadow:0 15px 30px #0002}
+  .nav-links.open{display:flex}.nav-btn{width:100%;text-align:center}
+  .about-grid,.achievements-grid{grid-template-columns:1fr;gap:40px}
+  .program-grid{grid-template-columns:1fr 1fr}.trophy{font-size:100px}
+  .stats{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px}.gallery-item{grid-column:span 1!important}
+  .g1{grid-column:span 2!important}.cta-inner{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .hero{min-height:650px}.hero-content{min-height:650px}.hero-copy{padding-top:30px}h1{font-size:48px;letter-spacing:-2px}
+  .hero-sports{font-size:17px}.hero-actions{flex-wrap:wrap}.section{padding:65px 0}
+  .program-grid{grid-template-columns:1fr}.features{flex-direction:column;gap:14px}.about-image{height:300px}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:145px}.g1{grid-column:span 2!important}
+  .footer-grid{grid-template-columns:1fr}.footer-logo{margin-bottom:5px}
+}
